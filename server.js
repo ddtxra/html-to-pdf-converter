@@ -35,7 +35,14 @@ app.get('/pdf', (req, res) => {
   res.setHeader('Content-type', 'application/pdf');
   var params = setDefaultValueForParams(req.query);
   console.log("Calling rendering url with " + JSON.stringify(params));
-  request.post({url:render_url, formData: params}).pipe(res)
+  var filename = __dirname + "/document.pdf";
+  var stream = request.post({url:render_url, formData: params}).pipe(fs.createWriteStream(filename))
+  stream.on('finish', () =>{
+        fs.readFile(filename, function (err,data){
+            res.contentType("application/pdf");
+            res.send(data);
+        })
+  });
 });
 
 app.listen(PORT, HOST);
