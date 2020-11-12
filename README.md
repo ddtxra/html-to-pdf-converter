@@ -2,12 +2,16 @@
 Convenient web service to transform HTML on PDF.
 The web service uses Gotenberg renderer https://github.com/thecodingmachine/gotenberg
 
-Instructions
+#Instructions
 ```
 docker-compose up -d
 ```
 
-Access url example
+#Access url example
 ```
-http://localhost:8855/render?remoteURL=https://facebook.com&marginTop=20
+http://localhost:8855/pdf?remoteURL=https://facebook.com&marginTop=20
 ```
+
+See Gotenberg manual for options:
+
+https://thecodingmachine.github.io/gotenberg/

@@ -22,6 +22,7 @@ function setDefaultValueForParams(query) {
   if(!query.marginBottom) query.marginBottom = '0'
   if(!query.marginLeft) query.marginLeft = '0'
   if(!query.marginRight) query.marginRight = '0'
+  if(!query.waitTimeout) query.waitTimeout = '30'
   return query;
 }
 
@@ -29,7 +30,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.get('/render', (req, res) => {
+app.get('/pdf', (req, res) => {
   //res.setHeader('Content-disposition', 'inline; filename="print.pdf"');
   res.setHeader('Content-type', 'application/pdf');
   var params = setDefaultValueForParams(req.query);
