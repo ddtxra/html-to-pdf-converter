@@ -1,0 +1,14 @@
+{
+  "name": "html_pdf_converter",
+  "version": "1.0.0",
+  "description": "HTML pdf converter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "multer": "^1.4.2",
+    "request": "^2.88.2"
+  }
+}
