@@ -1,5 +1,5 @@
 
-Convenient web service to transform HTML on PDF.
+Convenient web service dockerized, to transform an URL (HTML) into a PDF.
 The web service uses Gotenberg renderer https://github.com/thecodingmachine/gotenberg
 
 # Instructions
