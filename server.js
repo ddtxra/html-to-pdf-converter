@@ -36,10 +36,11 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/pdf/**', (req, res) => {
+var path = "/pdf/";
+app.get(path + '**', (req, res) => {
     //res.setHeader('Content-disposition', 'inline; filename="print.pdf"');
     res.setHeader('Content-type', 'application/pdf');
-    var url = req.originalUrl.substr("/render-pdf/".length);
+    var url = req.originalUrl.substr(path.length);
     var params = getOptions(req.query, url);
     console.log("Calling rendering url with " + JSON.stringify(params));
     var filename = __dirname + "/document.pdf";
