@@ -9,7 +9,8 @@ docker-compose up -d
 
 ## Access url example
 ```
-http://localhost:8855/pdf?remoteURL=https://facebook.com&marginTop=20
+http://localhost:8855/pdf?remoteURL=https://google.com
+http://localhost:8855/pdf?remoteURL=https://facebook.com&marginTop=2
 ```
 
 See Gotenberg manual for options:
