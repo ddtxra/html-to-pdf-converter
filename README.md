@@ -10,6 +10,7 @@ docker-compose up -d
 ## Access url example
 ```
 http://localhost:8855/pdf/https://google.com
+http://localhost:8855/pdf/https://google.com/search?q=gotenberg
 http://localhost:8855/pdf/https://facebook.com&marginTop=2
 ```
 
