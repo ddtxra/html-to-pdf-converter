@@ -1,4 +1,6 @@
 
+# URL to PDF converter (using simple HTTP GET)
+
 Convenient web service dockerized, to transform an URL (HTML) into a PDF.
 The web service uses Gotenberg renderer https://github.com/thecodingmachine/gotenberg
 
