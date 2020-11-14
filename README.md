@@ -4,7 +4,7 @@
 Convenient web service dockerized, to transform an URL (HTML) into a PDF.
 The web service uses Gotenberg renderer https://github.com/thecodingmachine/gotenberg
 
-# Instructions
+## Run project
 ```
 docker-compose up -d
 ```
