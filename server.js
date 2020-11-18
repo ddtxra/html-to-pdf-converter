@@ -5,8 +5,7 @@ const request = require('request');
 const express = require('express');
 var path = require('path');
 
-//var render_url =  "http://renderer:3000/convert/url"
-var render_url =  "http://vmlp-01026:8899/convert/url"
+var render_url =  "http://renderer:3000/convert/url"
 
 
 // Constants
