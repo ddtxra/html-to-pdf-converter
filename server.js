@@ -48,8 +48,8 @@ app.get(path + '**', (req, res) => {
           fs.readFile(filename, function (err,data){
               if(req.query.forceDownload){
 		var filenameForDownload = "document.pdf"
-		if(req.query.filename) {
-			filenameForDownload = req.query.filename;
+		if(req.query.filenameForDownload) {
+			filenameForDownload = req.query.filenameForDownload;
 		}
 		res.setHeader('Content-disposition', 'attachment; filename=' + filenameForDownload);
                 console.log("Sending data as download");
