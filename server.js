@@ -47,8 +47,13 @@ app.get(path + '**', (req, res) => {
     var stream = request.post({url:render_url, formData: params}).pipe(fs.createWriteStream(filename))
     stream.on('finish', () =>{
           fs.readFile(filename, function (err,data){
-              res.contentType("application/pdf");
-              console.log("Sending data");
+              if(req.query.forceDownload){
+		res.setHeader('Content-disposition', 'attachment; filename=document.pdf');
+                console.log("Sending data as download");
+	      }else {
+		res.contentType("application/pdf");
+                console.log("Sending data in browser");
+	      }
               res.send(data);
           })
     });
